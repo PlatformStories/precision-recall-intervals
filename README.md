@@ -1,13 +1,14 @@
 # precision-recall-intervals
 
 A Python script to compute precision/recall confidence intervals for a binary classifier.
+
 The methodology is based on Section 3.5 of the paper
 ["Approximate Recall Confidence Intervals, Webber, 2012"](https://arxiv.org/abs/1202.2880).
-The main idea is to assign the negative predictive value and the positive predictive value (i.e., precision) [Jeffreys priors](https://en.wikipedia.org/wiki/Jeffreys_prior), and then evaluate the posteriors by counting the number of false negatives in a sample from the total population of presumed negatives and the number of false positives in a sample from the total population of presumed positives, respectively.
+The main idea is to assign the negative predictive value and the positive predictive value (i.e., precision) [Jeffreys priors](https://en.wikipedia.org/wiki/Jeffreys_prior), and then evaluate the posteriors by counting the number of false negatives in a sample from the total population of presumed negatives, and the number of false positives in a sample from the total population of presumed positives, respectively.
 
 The inputs to the script are the following:
 
-+ total number of presumed negatives;
++ total number of candidate negatives;
 + total number of sampled candidate negatives;
 + number of false negatives;
 + number of candidate positives;
@@ -15,7 +16,7 @@ The inputs to the script are the following:
 + number of false positives;
 + confidence level in (0, 1).
 
-The script returns an a-confidence precision interval [p1, p2] and an a-confidence recall interval [r1, r2].
+The script returns a precision interval [p1, p2] and a recall interval [r1, r2] at the specified confidence level.
 
 ## Example
 
