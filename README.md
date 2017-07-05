@@ -3,7 +3,7 @@
 A Python script to compute precision/recall confidence intervals for a binary classifier.
 
 The methodology is based on Section 3.5 of the paper
-['Approximate Recall Confidence Intervals'](https://arxiv.org/abs/1202.2880).
+['Approximate Recall Confidence Intervals' by W. Weber (2012)](https://arxiv.org/abs/1202.2880).
 The main idea is to assign the negative predictive value and the positive predictive value (i.e., precision) [Jeffreys priors](https://en.wikipedia.org/wiki/Jeffreys_prior), and then evaluate the posteriors by counting the number of false negatives in a sample from the total population of presumed negatives, and the number of false positives in a sample from the total population of presumed positives, respectively.
 
 The inputs to the script are the following:
