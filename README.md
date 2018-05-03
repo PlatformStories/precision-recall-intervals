@@ -20,12 +20,12 @@ The script returns a precision interval [p1, p2] and a recall interval [r1, r2] 
 
 ## Example
 
-Consider a population of 41643552 features. Our hypothetical classifier classifies 39615617 features as 0 (negative) and 2027935 features as 1 (positive). We sample 7777 features from class 0 and identify 55 of those as false negatives, and 672 features from class 1 and identify 131 of those as false positives. The 0.95 confidence intervals for precision and recall are obtained as follows:
+Consider a population of 41643552 features. Our hypothetical classifier classifies 39615617 features as 0 (negative) and 2027935 features as 1 (positive). We sample 7853 features from class 0 and identify 131 of those as false negatives, and 596 features from class 1 and identify 55 of those as false positives. The 0.95 confidence intervals for precision and recall are obtained as follows:
 
 ```bash
-python compute.py 39615617 7777 55 2027935 672 131 0.95
-Precision 0.95 confidence interval: [0.773833542381, 0.833664465925]
-Recall 0.95 confidence interval: [0.818113730693, 0.884150619008]
+python compute.py 39615617 7853 131 2027935 596 55 0.95
+Precision 0.95 confidence interval: [0.882505817635, 0.928983677706]
+Recall 0.95 confidence interval: [0.701872052529, 0.768669678102]
 ```
 
 ## Install
